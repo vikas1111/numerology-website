@@ -1,211 +1,316 @@
-<!DOCTYPE html>
-<html lang="mr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VVIKAS NUMEROLOGY HUB - Mobile Numerology</title>
+<!doctype html>
+<html lang="mr" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VVIKASNUMEROLOGYHUB.IN - Numerology Services</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind = { corePlugins: { preflight: false } }</script>
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    // तुमचा Pixel ID इथे अपडेट केला आहे
+    fbq('init', '1352262722891575'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1352262722891575&ev=PageView&noscript=1">
+  </noscript>
+  <style>
+    /* बेसिक सेटिंग्ज */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
+      background-color: #f8fafc;
+    }
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    .mystic-bg { background: #1e1b4b; }
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#2E1065', // Deep Purple
-                            gold: '#F59E0B', // Gold
-                            light: '#F3E8FF'  // Light Purple
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    /* ॲनिमेशन्स */
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      will-change: transform;
+    }
+    .card-hover:hover {
+      transform: translate3d(0, -4px, 0);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gradient-border {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 3px;
+      border-radius: 1.5rem;
+    }
+    
+    .gradient-border-inner {
+      background: white;
+      border-radius: calc(1.5rem - 3px);
+    }
+    
+    /* Toast Notification */
+    #toast {
+      will-change: transform, opacity;
+    }
+  </style>
+ </head>
 
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', '1352262722891575');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1352262722891575&ev=PageView&noscript=1"
-    /></noscript>
-    <style>
-        .gold-gradient { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
-        .purple-gradient { background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%); }
-        .card-shine:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900">
+ <body class="h-full overflow-auto text-slate-800">
+  <div id="app-wrapper" class="w-full min-h-full">
+   
+   <header class="mystic-bg text-white py-10 px-4 text-center">
+    <div class="mb-4">
+     <div class="text-6xl">⭐</div>
+    </div>
+    <h1 id="main-title" class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3 tracking-tight break-words px-2">VVIKASNUMEROLOGYHUB.IN</h1>
+    <p id="subtitle" class="text-indigo-200 text-lg md:text-xl max-w-2xl mx-auto">तुमचा मोबाइल नंबर तुमचे नशीब बदलू शकतो!</p>
+    <div class="flex justify-center mt-6">
+     <div class="w-24 h-1 bg-amber-400"></div>
+    </div>
+   </header>
 
-    <nav class="bg-brand-dark text-white p-4 sticky top-0 z-50 shadow-lg">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="font-extrabold text-xl tracking-wider text-yellow-400">VVIKAS HUB</div>
-            <button onclick="handleWhatsApp('inquiry')" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-            </button>
+   <main class="max-w-7xl mx-auto py-12 px-4">
+    
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 mb-10 rounded-r-xl shadow-lg max-w-3xl mx-auto">
+     <div class="space-y-3">
+      <div class="flex items-center gap-3">
+       <svg class="w-8 h-8 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+       <p id="offer-text" class="text-amber-800 font-semibold text-lg">मर्यादित कालावधीसाठी खास ऑफर! आजच तुमचा अहवाल मिळवा.</p>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-md">
+       <div class="flex items-center justify-center gap-2 mb-2">
+        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span class="text-slate-700 font-semibold">ऑफर संपायला उरलेला वेळ:</span>
+       </div>
+       <div class="flex justify-center gap-3">
+        <div class="text-center">
+         <div class="bg-red-500 text-white rounded-lg px-4 py-2 min-w-[70px]"><span id="timer-minutes" class="text-3xl font-bold">15</span></div>
+         <span class="text-xs text-slate-600 mt-1 block">मिनिटे</span>
         </div>
-    </nav>
-
-    <header class="purple-gradient text-white pt-12 pb-24 px-4 text-center rounded-b-[3rem] shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">तुमचा मोबाईल नंबर <br/><span class="text-yellow-400">तुमचे नशीब बदलू शकतो!</span></h1>
-        <p class="text-lg md:text-xl text-purple-200 max-w-2xl mx-auto mb-8">चुकीचा मोबाईल नंबर तुमच्या प्रगतीत अडथळा ठरू शकतो. आजच सायंटिफिक रिपोर्ट मिळवा.</p>
-        
-        <div class="inline-flex bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl gap-4 items-center animate-pulse-slow">
-            <span class="text-yellow-300 font-bold">⚡ मर्यादित ऑफर:</span>
-            <div class="flex gap-2 text-2xl font-mono font-bold">
-                <span id="timer-min">15</span>:<span id="timer-sec">00</span>
-            </div>
+        <div class="flex items-center text-2xl font-bold text-red-500">:</div>
+        <div class="text-center">
+         <div class="bg-red-500 text-white rounded-lg px-4 py-2 min-w-[70px]"><span id="timer-seconds" class="text-3xl font-bold">00</span></div>
+         <span class="text-xs text-slate-600 mt-1 block">सेकंद</span>
         </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto px-4 -mt-16 relative z-10 pb-20">
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="bg-white rounded-2xl shadow-xl p-8 card-shine border-t-4 border-gray-400 transition-all">
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-gray-700">Free Chat</h3>
-                    <div class="my-4"><span class="text-4xl font-extrabold text-gray-800">₹0</span></div>
-                    <p class="text-sm text-gray-500 mb-6">मूळांक आणि नशिबाचा प्राथमिक अंदाज</p>
-                </div>
-                <ul class="space-y-3 mb-8 text-sm text-gray-600">
-                    <li class="flex items-center gap-2">✅ <span>बेसिक नंबर विश्लेषण</span></li>
-                    <li class="flex items-center gap-2">✅ <span>मोफत सल्ला</span></li>
-                </ul>
-                <button onclick="handleWhatsApp('free')" class="w-full py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200">आता चॅट करा</button>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-2xl p-8 card-shine border-t-4 border-yellow-500 relative transform md:-translate-y-4">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">⭐ सर्वाधिक पसंती</div>
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-brand-dark">Mobile Numerology</h3>
-                    <div class="my-4 flex justify-center items-center gap-2">
-                        <span class="text-5xl font-extrabold text-yellow-600">₹499</span>
-                        <span class="text-gray-400 line-through text-lg">₹1999</span>
-                    </div>
-                    <div class="inline-block bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-bold mb-6">75% सूट</div>
-                </div>
-                <ul class="space-y-4 mb-8 text-gray-700 font-medium">
-                    <li class="flex items-center gap-3">✅ <span class="text-brand-dark">80+ पानांचा सविस्तर रिपोर्ट</span></li>
-                    <li class="flex items-center gap-3">✅ <span>भाग्यवान नंबर लिस्ट</span></li>
-                    <li class="flex items-center gap-3">✅ <span>WhatsApp द्वारे डिलिव्हरी</span></li>
-                    <li class="flex items-center gap-3">✅ <span>करिअर आणि मनी ग्रोथ</span></li>
-                </ul>
-                <button onclick="handlePayment('mobile', 499)" class="w-full py-4 gold-gradient text-white font-bold rounded-xl hover:opacity-90 shadow-lg text-lg">खरेदी करा (₹499)</button>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl p-8 card-shine border-t-4 border-purple-600 transition-all">
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-purple-700">VIP Service</h3>
-                    <div class="my-4"><span class="text-4xl font-extrabold text-purple-800">₹4999</span></div>
-                    <p class="text-sm text-gray-500 mb-6">आम्ही स्वतः नंबर शोधून देऊ</p>
-                </div>
-                <ul class="space-y-3 mb-8 text-sm text-gray-600">
-                    <li class="flex items-center gap-2">✅ <span>VIP नंबर निवड</span></li>
-                    <li class="flex items-center gap-2">✅ <span>पूर्ण सेटअप मदत</span></li>
-                    <li class="flex items-center gap-2">✅ <span>लाइफटाईम सपोर्ट</span></li>
-                </ul>
-                <button onclick="handlePayment('vip', 4999)" class="w-full py-3 bg-purple-100 text-purple-700 font-bold rounded-xl hover:bg-purple-200">VIP बुकिंग</button>
-            </div>
-
-        </div>
-
-        <div class="mt-20 text-center">
-            <h2 class="text-2xl font-bold text-brand-dark mb-8">आमच्यावर विश्वास का ठेवावा?</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64">
-                    <div class="text-4xl mb-2">🏆</div>
-                    <div class="font-bold text-lg">5000+ ग्राहक</div>
-                    <div class="text-sm text-gray-500">संपूर्ण महाराष्ट्रात</div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64">
-                    <div class="text-4xl mb-2">⭐</div>
-                    <div class="font-bold text-lg">4.9 रेटिंग</div>
-                    <div class="text-sm text-gray-500">Google Reviews</div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64">
-                    <div class="text-4xl mb-2">🔒</div>
-                    <div class="font-bold text-lg">100% सुरक्षित</div>
-                    <div class="text-sm text-gray-500">SSL प्रमाणित पेमेंट</div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="bg-brand-dark text-purple-200 py-10 text-center">
-        <p class="font-bold text-white mb-2">VVIKAS NUMEROLOGY HUB</p>
-        <p class="text-sm mb-4">© 2026 सर्व हक्क राखीव.</p>
-        <button onclick="handleWhatsApp('inquiry')" class="text-sm underline hover:text-white">Contact Support</button>
-    </footer>
-
-    <div id="toast" class="fixed bottom-5 right-5 bg-green-600 text-white px-6 py-3 rounded-lg shadow-2xl translate-y-24 transition-transform duration-300 z-50 flex items-center gap-3 font-semibold">
-        <span>✅</span> <span id="toast-msg">Message</span>
+       </div>
+      </div>
+     </div>
     </div>
 
-    <script>
-        // Timer Logic
-        let time = 15 * 60;
-        const timerMin = document.getElementById('timer-min');
-        const timerSec = document.getElementById('timer-sec');
+    <section class="text-center mb-16">
+     <h2 id="hero-title" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-indigo-950 mb-6 leading-tight">तुमच्या मोबाइल नंबरमध्ये दडलेले <br class="hidden md:block"> यशाचे रहस्य जाणून घ्या</h2>
+     <p id="hero-description" class="text-lg text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">अनेक लोक चुकीचा मोबाइल नंबर वापरल्यामुळे प्रगतीत अडथळे अनुभवतात. आम्ही तुम्हाला विज्ञानावर आधारित अंकशास्त्राचा अहवाल देऊ, जो थेट तुमच्या WhatsApp वर येईल.</p>
+     
+     <div class="flex flex-wrap justify-center gap-6 mb-12">
+      <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+       <span class="text-green-500">✔</span> <span class="text-sm font-medium text-slate-700">5000+ समाधानी ग्राहक</span>
+      </div>
+      <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+       <span class="text-amber-500">★</span> <span class="text-sm font-medium text-slate-700">4.9 रेटिंग</span>
+      </div>
+      <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+       <span class="text-blue-500">🛡</span> <span class="text-sm font-medium text-slate-700">100% सुरक्षित</span>
+      </div>
+     </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" id="plans-container">
+     
+     <div class="card-hover bg-white rounded-2xl p-6 border-2 border-slate-200 shadow-lg flex flex-col h-full">
+      <div class="mb-4 flex justify-center">
+       <div class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center">
+        <svg class="w-7 h-7 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+       </div>
+      </div>
+      <h3 class="text-xl font-bold mb-1 text-slate-800">Free Chat</h3>
+      <p class="text-sm text-slate-500 mb-4">तुमच्या मूळांकाचा मोफत अहवाल</p>
+      <div class="mb-6"><span class="text-4xl font-extrabold text-slate-800">₹0</span> <span class="text-slate-400 ml-2">मोफत</span></div>
+      <ul class="space-y-3 mb-6 flex-grow">
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> नंबर विश्लेषण</li>
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> मोफत चॅट सपोर्ट</li>
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> झटपट उत्तर</li>
+      </ul>
+      <button onclick="handleWhatsApp('free')" class="w-full py-3 px-4 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-2">आता चॅट करा</button>
+     </div>
+
+     <div class="card-hover relative flex flex-col h-full">
+      <div class="gradient-border h-full">
+       <div class="gradient-border-inner p-6 h-full flex flex-col">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10"><span class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg"> ⭐ सर्वाधिक विकली जाणारी </span></div>
+        <div class="mb-4 flex justify-center mt-2">
+         <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center">
+          <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+         </div>
+        </div>
+        <h3 class="text-xl font-bold mb-1 text-slate-800">Mobile Numerology</h3>
+        <p class="text-sm text-slate-500 mb-4">मोबाइल नंबराचा सविस्तर अहवाल</p>
+        <div class="mb-6"><span class="text-4xl font-extrabold text-indigo-600">₹499</span> <span class="text-slate-400 line-through ml-2">₹1999</span> <span class="ml-2 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">75% सूट</span></div>
+        <ul class="space-y-3 mb-6 flex-grow">
+         <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> सविस्तर PDF अहवाल</li>
+         <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> WhatsApp द्वारे डिलिव्हरी</li>
+         <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> भाग्यवान नंबर तपासणी</li>
+        </ul>
+        <button onclick="handlePayment('mobile', 499)" class="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2 shadow-lg">खरेदी करा</button>
+       </div>
+      </div>
+     </div>
+
+     <div class="card-hover bg-white rounded-2xl p-6 border-2 border-purple-200 shadow-lg flex flex-col h-full">
+      <div class="mb-4 flex justify-center">
+       <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center">
+        <svg class="w-7 h-7 text-purple-600" fill="currentColor" viewbox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+       </div>
+      </div>
+      <h3 class="text-xl font-bold mb-1 text-slate-800">Number Suggestion</h3>
+      <p class="text-sm text-slate-500 mb-4">नवीन भाग्यवान नंबर सुचवणे</p>
+      <div class="mb-6"><span class="text-4xl font-extrabold text-purple-600">₹1599</span> <span class="text-slate-400 line-through ml-2">₹2999</span> <span class="ml-2 bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-xs font-bold">47% सूट</span></div>
+      <ul class="space-y-3 mb-6 flex-grow">
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> व्यक्तिगत सल्ला</li>
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> 5 भाग्यवान नंबर पर्याय</li>
+       <li class="flex items-center gap-2 text-sm text-slate-600"><span class="text-green-500">✔</span> व्यापार/करिअरसाठी</li>
+      </ul>
+      <button onclick="handlePayment('expert', 1599)" class="w-full py-3 px-4 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all flex items-center justify-center gap-2">सल्ला घ्या</button>
+     </div>
+
+     <div class="card-hover bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border-2 border-amber-300 shadow-lg flex flex-col h-full">
+      <div class="text-right mb-2"><span class="text-amber-600 text-sm font-bold">VIP</span></div>
+      <div class="mb-4 flex justify-center">
+       <div class="w-14 h-14 bg-amber-200 rounded-xl flex items-center justify-center">
+        <svg class="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+       </div>
+      </div>
+      <h3 class="text-xl font-bold mb-1 text-slate-800">Done-For-You</h3>
+      <p class="text-sm text-slate-500 mb-4">आम्ही नंबर निवडून देऊ</p>
+      <div class="mb-6"><span class="text-4xl font-extrabold text-amber-700">₹4999</span> <span class="text-slate-400 line-through ml-2">₹9999</span> <span class="ml-2 bg-amber-200 text-amber-800 px-2 py-0.5 rounded text-xs font-bold">50% सूट</span></div>
+      <ul class="space-y-3 mb-6 flex-grow">
+       <li class="flex items-center gap-2 text-sm text-slate-700"><span class="text-amber-600">✔</span> VIP नंबर निवड</li>
+       <li class="flex items-center gap-2 text-sm text-slate-700"><span class="text-amber-600">✔</span> पूर्ण सेटअप मदत</li>
+       <li class="flex items-center gap-2 text-sm text-slate-700"><span class="text-amber-600">✔</span> आजीवन सपोर्ट</li>
+      </ul>
+      <button onclick="handlePayment('vip', 4999)" class="w-full py-3 px-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all flex items-center justify-center gap-2 shadow-lg">VIP बुकिंग करा</button>
+     </div>
+
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-center text-slate-800 mb-10">हे कसे काम करते?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold text-indigo-600">1</span></div>
+          <h3 class="text-lg font-semibold mb-2">योजना निवडा</h3>
+          <p class="text-slate-600">तुमच्या गरजेनुसार योग्य योजना निवडा</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold text-purple-600">2</span></div>
+          <h3 class="text-lg font-semibold mb-2">पेमेंट भरा</h3>
+          <p class="text-slate-600">सुरक्षित UPI/Card पेमेंट</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold text-green-600">3</span></div>
+          <h3 class="text-lg font-semibold mb-2">अहवाल मिळवा</h3>
+          <p class="text-slate-600">WhatsApp द्वारे अहवाल प्राप्त करा</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-3xl p-8 md:p-12 text-center text-white mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">आजच तुमचा अहवाल मिळवा!</h2>
+      <button onclick="handleWhatsApp('inquiry')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg">WhatsApp द्वारे संपर्क करा</button>
+    </section>
+
+   </main>
+
+   <footer class="bg-slate-900 text-slate-400 py-8 px-4 text-center">
+    <p class="mb-2">© 2026 VVIKASNUMEROLOGYHUB.IN. सर्व हक्क राखीव.</p>
+   </footer>
+  </div>
+
+  <div id="toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+   <div class="flex items-center gap-2">
+    <span>✅</span><span id="toast-message">यशस्वी!</span>
+   </div>
+  </div>
+
+  <script>
+    // --- Timer Logic ---
+    let countdownInterval;
+    let totalSeconds = 15 * 60; // 15 minutes
+
+    function updateTimer() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      
+      const mElem = document.getElementById('timer-minutes');
+      const sElem = document.getElementById('timer-seconds');
+      
+      if (mElem && sElem) {
+        mElem.textContent = minutes.toString().padStart(2, '0');
+        sElem.textContent = seconds.toString().padStart(2, '0');
         
-        setInterval(() => {
-            const m = Math.floor(time / 60);
-            const s = time % 60;
-            timerMin.innerText = m < 10 ? '0'+m : m;
-            timerSec.innerText = s < 10 ? '0'+s : s;
-            if(time > 0) time--;
-        }, 1000);
-
-        // Toast Logic
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-msg').innerText = msg;
-            toast.classList.remove('translate-y-24');
-            setTimeout(() => toast.classList.add('translate-y-24'), 3000);
+        // Red alert color for last 2 mins
+        if (totalSeconds <= 120) {
+           mElem.parentElement.style.backgroundColor = '#dc2626';
+           sElem.parentElement.style.backgroundColor = '#dc2626';
         }
+      }
+      
+      if (totalSeconds <= 0) {
+        clearInterval(countdownInterval);
+        showToast('ऑफर संपली! रिसेट करत आहे...');
+        setTimeout(() => { totalSeconds = 15 * 60; updateTimer(); startTimer(); }, 3000);
+      } else {
+        totalSeconds--;
+      }
+    }
 
-        // Action Handlers
-        function handleWhatsApp(type) {
-            const msgs = {
-                'free': 'नमस्कार! मला Free Chat साठी माहिती हवी आहे.',
-                'inquiry': 'नमस्कार! मला तुमच्या सेवांबद्दल विचारायचे आहे.'
-            };
-            const msg = msgs[type] || msgs['inquiry'];
-            window.open(`https://wa.me/918379965111?text=${encodeURIComponent(msg)}`, '_blank');
-            if(typeof fbq !== 'undefined') fbq('track', 'Contact');
-        }
+    function startTimer() {
+      updateTimer();
+      countdownInterval = setInterval(updateTimer, 1000);
+    }
+    startTimer();
 
-        function handlePayment(plan, amount) {
-            showToast('पेमेंट गेटवे उघडत आहे... कृपया थांबा.');
-            if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', {value: amount, currency: 'INR'});
-            
-            const links = {
-                'mobile': 'https://rzp.io/rzp/nDQmiRCh',
-                'vip': 'https://rzp.io/rzp/XVq5CXc',
-                'expert': 'https://rzp.io/rzp/3JxES65'
-            };
-            
-            if(links[plan]) {
-                setTimeout(() => window.open(links[plan], '_blank'), 1500);
-            }
-        }
-    </script>
-</body>
+    // --- Toast Logic ---
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      toastMessage.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    // --- Action Handlers ---
+    function handleWhatsApp(type) {
+      let message = 'नमस्कार! मला तुमच्या सेवांबद्दल जाणून घ्यायचे आहे.';
+      if(type === 'free') message = 'नमस्कार! मला Free Chat (मोफत अंक विश्लेषण) हवे आहे.';
+      if(type === 'inquiry') message = 'नमस्कार! मला अंकशास्त्र सेवांबद्दल अधिक माहिती हवी आहे.';
+      
+      window.open(`https://wa.me/918379965111?text=${encodeURIComponent(message)}`, '_blank');
+      if(typeof fbq !== 'undefined') fbq('track', 'Contact');
+    }
+
+    function handlePayment(plan, amount) {
+      showToast(`₹${amount} साठी पेमेंट पेज उघडत आहे...`);
+      if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', {value: amount, currency: 'INR'});
+      
+      let url = '';
+      if(plan === 'mobile') url = 'https://rzp.io/rzp/nDQmiRCh';
+      if(plan === 'expert') url = 'https://rzp.io/rzp/3JxES65';
+      if(plan === 'vip') url = 'https://rzp.io/rzp/XVq5CXc';
+      
+      if(url) setTimeout(() => window.open(url, '_blank'), 1000);
+    }
+  </script>
+ </body>
 </html>
