@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="mr" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,199 +7,302 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1352262722891575');
-        fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // तुमचा Pixel ID
+    fbq('init', '1352262722891575');
+    fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1352262722891575&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1352262722891575&ev=PageView&noscript=1"
+    /></noscript>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .mystic-header { background-color: #1e1b4b; color: white; }
-        .card-hover { transition: all 0.3s ease; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background-color: #f8fafc; }
+        .mystic-bg { background-color: #1e1b4b; }
+        
+        /* Card Hover Effects */
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        .gradient-text { background: linear-gradient(to right, #4f46e5, #9333ea); -webkit-background-clip: text; color: transparent; }
+        
+        /* Gradient Borders */
+        .gradient-border { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3px; border-radius: 1rem; }
+        .gradient-border-inner { background: white; border-radius: calc(1rem - 3px); height: 100%; }
+
+        /* Toast Animation */
+        #toast { transition: transform 0.3s ease, opacity 0.3s ease; }
+        .toast-hidden { transform: translateY(100px); opacity: 0; }
+        .toast-visible { transform: translateY(0); opacity: 1; }
     </style>
 </head>
-<body>
 
-    <header class="mystic-header py-12 px-4 text-center">
+<body class="h-full overflow-auto text-slate-800">
+
+    <header class="mystic-bg text-white py-12 px-4 text-center">
         <div class="text-6xl mb-4">⭐</div>
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">VVIKASNUMEROLOGYHUB.IN</h1>
-        <p class="text-indigo-200 text-lg max-w-2xl mx-auto">तुमचा मोबाइल नंबर तुमचे नशीब बदलू शकतो!</p>
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-3 tracking-tight">VVIKASNUMEROLOGYHUB.IN</h1>
+        <p class="text-indigo-200 text-lg md:text-xl max-w-2xl mx-auto">तुमचा मोबाइल नंबर तुमचे नशीब बदलू शकतो!</p>
         <div class="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-12">
+    <main class="max-w-7xl mx-auto py-12 px-4">
 
-        <div class="bg-orange-50 border-l-4 border-amber-500 p-6 mb-12 rounded-r-xl shadow-md max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-4">
-                <div class="text-3xl">⏳</div>
-                <div>
-                    <h3 class="text-amber-900 font-bold text-lg">मर्यादित कालावधीसाठी खास ऑफर!</h3>
-                    <p class="text-amber-700 text-sm">आजच तुमचा अहवाल मिळवा.</p>
+        <div class="bg-orange-50 border-l-4 border-amber-500 p-6 mb-12 rounded-r-xl shadow-lg max-w-3xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <p class="text-amber-900 font-bold text-lg">मर्यादित कालावधीसाठी खास ऑफर! आजच तुमचा अहवाल मिळवा.</p>
                 </div>
-            </div>
-            
-            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4">
-                <div class="text-center">
-                    <div class="bg-red-600 text-white text-2xl font-bold px-3 py-1 rounded" id="min">15</div>
-                    <div class="text-xs text-gray-500 mt-1">मिनिटे</div>
-                </div>
-                <div class="text-2xl font-bold text-red-600">:</div>
-                <div class="text-center">
-                    <div class="bg-red-600 text-white text-2xl font-bold px-3 py-1 rounded" id="sec">00</div>
-                    <div class="text-xs text-gray-500 mt-1">सेकंद</div>
+                
+                <div class="bg-white px-6 py-3 rounded-lg shadow-sm flex items-center gap-3">
+                    <div class="text-center">
+                        <span id="timer-minutes" class="bg-red-600 text-white px-3 py-1 rounded text-2xl font-bold">15</span>
+                        <div class="text-xs text-gray-500 mt-1">मिनिटे</div>
+                    </div>
+                    <div class="text-2xl font-bold text-red-600">:</div>
+                    <div class="text-center">
+                        <span id="timer-seconds" class="bg-red-600 text-white px-3 py-1 rounded text-2xl font-bold">00</span>
+                        <div class="text-xs text-gray-500 mt-1">सेकंद</div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">तुमच्या मोबाइल नंबरमध्ये दडलेले <br/> <span class="gradient-text">यशाचे रहस्य जाणून घ्या</span></h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">अनेक लोक चुकीचा मोबाइल नंबर वापरल्यामुळे प्रगतीत अडथळे अनुभवतात. आम्ही तुम्हाला विज्ञानावर आधारित अंकशास्त्राचा अहवाल देऊ.</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-indigo-950 mb-6 leading-tight">तुमच्या मोबाइल नंबरमध्ये दडलेले <br class="hidden md:block"> यशाचे रहस्य जाणून घ्या</h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">अनेक लोक चुकीचा मोबाइल नंबर वापरल्यामुळे प्रगतीत अडथळे अनुभवतात. आम्ही तुम्हाला विज्ञानावर आधारित अंकशास्त्राचा अहवाल देऊ, जो थेट तुमच्या WhatsApp वर येईल.</p>
             
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold text-slate-700">✅ 5000+ ग्राहक</span>
-                <span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold text-slate-700">⭐ 4.9 रेटिंग</span>
-                <span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold text-slate-700">🔒 100% सुरक्षित</span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-white px-4 py-2 rounded-full shadow text-green-700 font-semibold">✔ 5000+ समाधानी ग्राहक</span>
+                <span class="bg-white px-4 py-2 rounded-full shadow text-amber-600 font-semibold">★ 4.9 रेटिंग</span>
+                <span class="bg-white px-4 py-2 rounded-full shadow text-blue-600 font-semibold">🛡 100% सुरक्षित</span>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
 
-            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100 flex flex-col">
-                <div class="text-center mb-6">
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">💬</div>
-                    <h3 class="text-xl font-bold text-slate-800">Free Chat</h3>
-                    <div class="text-3xl font-extrabold text-slate-900 mt-2">₹0</div>
+            <div class="card-hover bg-white rounded-2xl p-6 border-2 border-slate-200 shadow-lg flex flex-col h-full">
+                <div class="flex justify-center mb-4">
+                    <div class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center text-2xl">💬</div>
                 </div>
-                <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                <h3 class="text-xl font-bold text-center mb-1">Free Chat</h3>
+                <p class="text-sm text-slate-500 text-center mb-4">तुमच्या मूळांकाचा मोफत अहवाल</p>
+                <div class="text-center mb-6"><span class="text-4xl font-extrabold">₹0</span> <span class="text-slate-400">मोफत</span></div>
+                <ul class="space-y-3 mb-6 flex-grow text-sm text-slate-600">
                     <li class="flex gap-2">✅ नंबर विश्लेषण</li>
                     <li class="flex gap-2">✅ मोफत चॅट सपोर्ट</li>
+                    <li class="flex gap-2">✅ झटपट उत्तर</li>
                 </ul>
-                <button onclick="handleWhatsApp('free')" class="w-full py-3 bg-gray-100 text-gray-800 font-bold rounded-xl hover:bg-gray-200 transition">आता चॅट करा</button>
+                <button onclick="handleWhatsApp('free')" class="w-full py-3 bg-slate-100 text-slate-800 font-bold rounded-xl hover:bg-slate-200 transition">आता चॅट करा</button>
             </div>
 
-            <div class="bg-white p-1 rounded-2xl shadow-xl card-hover relative transform md:-translate-y-4">
-                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-xl h-full flex flex-col bg-white">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Most Popular</div>
-                    
-                    <div class="text-center mb-6 mt-2">
-                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">📱</div>
-                        <h3 class="text-xl font-bold text-slate-800">Mobile Numerology</h3>
-                        <div class="mt-2">
-                            <span class="text-3xl font-extrabold text-indigo-600">₹499</span>
-                            <span class="text-gray-400 line-through text-sm">₹1999</span>
+            <div class="card-hover relative h-full">
+                <div class="gradient-border h-full">
+                    <div class="gradient-border-inner p-6 flex flex-col">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">⭐ सर्वाधिक विकली जाणारी</div>
+                        <div class="flex justify-center mb-4 mt-2">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-2xl">📱</div>
                         </div>
-                        <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded font-bold">75% OFF</span>
+                        <h3 class="text-xl font-bold text-center mb-1">Mobile Numerology</h3>
+                        <p class="text-sm text-slate-500 text-center mb-4">मोबाइल नंबराचा सविस्तर अहवाल</p>
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-extrabold text-indigo-600">₹499</span>
+                            <span class="text-slate-400 line-through text-sm">₹1999</span>
+                            <span class="block bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded mt-1 inline-block">75% सूट</span>
+                        </div>
+                        <ul class="space-y-3 mb-6 flex-grow text-sm text-slate-600">
+                            <li class="flex gap-2">✅ सविस्तर PDF अहवाल</li>
+                            <li class="flex gap-2">✅ WhatsApp द्वारे डिलिव्हरी</li>
+                            <li class="flex gap-2">✅ भाग्यवान नंबर तपासणी</li>
+                        </ul>
+                        <button onclick="handlePayment('mobile', 499)" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl hover:opacity-90 shadow-lg transition">खरेदी करा</button>
                     </div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
-                        <li class="flex gap-2">✅ सविस्तर PDF अहवाल</li>
-                        <li class="flex gap-2">✅ WhatsApp डिलिव्हरी</li>
-                        <li class="flex gap-2">✅ भाग्यवान नंबर तपासणी</li>
-                    </ul>
-                    <button onclick="handlePayment('mobile', 499)" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl hover:opacity-90 shadow-lg transition">खरेदी करा</button>
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border-2 border-purple-100 flex flex-col">
-                <div class="text-center mb-6">
-                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">👨‍🏫</div>
-                    <h3 class="text-xl font-bold text-slate-800">Number Suggestion</h3>
-                    <div class="mt-2">
-                        <span class="text-3xl font-extrabold text-purple-600">₹1599</span>
-                        <span class="text-gray-400 line-through text-sm">₹2999</span>
-                    </div>
+            <div class="card-hover bg-white rounded-2xl p-6 border-2 border-purple-200 shadow-lg flex flex-col h-full">
+                <div class="flex justify-center mb-4">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl">👨‍🏫</div>
                 </div>
-                <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                <h3 class="text-xl font-bold text-center mb-1">Number Suggestion</h3>
+                <p class="text-sm text-slate-500 text-center mb-4">नवीन भाग्यवान नंबर सुचवणे</p>
+                <div class="text-center mb-6">
+                    <span class="text-4xl font-extrabold text-purple-600">₹1599</span>
+                    <span class="text-slate-400 line-through text-sm">₹2999</span>
+                    <span class="block bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded mt-1 inline-block">47% सूट</span>
+                </div>
+                <ul class="space-y-3 mb-6 flex-grow text-sm text-slate-600">
                     <li class="flex gap-2">✅ व्यक्तिगत सल्ला</li>
                     <li class="flex gap-2">✅ 5 भाग्यवान नंबर पर्याय</li>
+                    <li class="flex gap-2">✅ व्यापार/करिअरसाठी</li>
                 </ul>
                 <button onclick="handlePayment('expert', 1599)" class="w-full py-3 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition">सल्ला घ्या</button>
             </div>
 
-            <div class="bg-amber-50 p-6 rounded-2xl shadow-lg card-hover border border-amber-200 flex flex-col">
-                <div class="text-right text-xs font-bold text-amber-600 mb-2">VIP SERVICE</div>
-                <div class="text-center mb-6">
-                    <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">👑</div>
-                    <h3 class="text-xl font-bold text-slate-800">Done-For-You</h3>
-                    <div class="mt-2">
-                        <span class="text-3xl font-extrabold text-amber-700">₹4999</span>
-                        <span class="text-gray-400 line-through text-sm">₹9999</span>
-                    </div>
+            <div class="card-hover bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border-2 border-amber-300 shadow-lg flex flex-col h-full">
+                <div class="text-right text-xs font-bold text-amber-600 mb-2">VIP</div>
+                <div class="flex justify-center mb-4">
+                    <div class="w-14 h-14 bg-amber-200 rounded-xl flex items-center justify-center text-2xl">👑</div>
                 </div>
-                <ul class="space-y-3 mb-8 text-sm text-slate-700 flex-grow">
+                <h3 class="text-xl font-bold text-center mb-1">Done-For-You</h3>
+                <p class="text-sm text-slate-500 text-center mb-4">आम्ही नंबर निवडून देऊ</p>
+                <div class="text-center mb-6">
+                    <span class="text-4xl font-extrabold text-amber-700">₹4999</span>
+                    <span class="text-slate-400 line-through text-sm">₹9999</span>
+                    <span class="block bg-amber-200 text-amber-800 text-xs font-bold px-2 py-1 rounded mt-1 inline-block">50% सूट</span>
+                </div>
+                <ul class="space-y-3 mb-6 flex-grow text-sm text-slate-700">
                     <li class="flex gap-2">✅ VIP नंबर निवड</li>
                     <li class="flex gap-2">✅ पूर्ण सेटअप मदत</li>
                     <li class="flex gap-2">✅ आजीवन सपोर्ट</li>
                 </ul>
                 <button onclick="handlePayment('vip', 4999)" class="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl hover:opacity-90 shadow-lg transition">VIP बुकिंग करा</button>
             </div>
-
         </div>
 
-        <div class="mt-20 text-center">
-            <h2 class="text-3xl font-bold text-slate-800 mb-10">हे कसे काम करते?</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-8">
-                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-4xl text-indigo-600 font-bold mb-2">1</div>
-                    <h3 class="font-bold">योजना निवडा</h3>
-                    <p class="text-sm text-gray-500">तुमच्या गरजेनुसार योग्य प्लॅन निवडा</p>
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-10">हे कसे काम करते?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-indigo-600">1</div>
+                    <h3 class="text-lg font-semibold mb-2">योजना निवडा</h3>
+                    <p class="text-slate-600">तुमच्या गरजेनुसार योग्य योजना निवडा</p>
                 </div>
-                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-4xl text-purple-600 font-bold mb-2">2</div>
-                    <h3 class="font-bold">पेमेंट भरा</h3>
-                    <p class="text-sm text-gray-500">सुरक्षित UPI/Card पेमेंट</p>
+                <div class="text-center bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-purple-600">2</div>
+                    <h3 class="text-lg font-semibold mb-2">पेमेंट भरा</h3>
+                    <p class="text-slate-600">सुरक्षित UPI/Card पेमेंट</p>
                 </div>
-                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-4xl text-green-600 font-bold mb-2">3</div>
-                    <h3 class="font-bold">अहवाल मिळवा</h3>
-                    <p class="text-sm text-gray-500">WhatsApp द्वारे रिपोर्ट मिळवा</p>
+                <div class="text-center bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-green-600">3</div>
+                    <h3 class="text-lg font-semibold mb-2">अहवाल मिळवा</h3>
+                    <p class="text-slate-600">WhatsApp द्वारे अहवाल प्राप्त करा</p>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-10">आमचे समाधानी ग्राहक</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-amber-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 mb-4 italic">"नवीन नंबर घेतल्यापासून माझ्या व्यवसायात खूप वाढ झाली. खरोखरच अद्भुत अनुभव!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-indigo-200 rounded-full flex items-center justify-center font-bold text-indigo-700">र</div>
+                        <div>
+                            <p class="font-semibold text-slate-800">राहुल पाटील</p>
+                            <p class="text-sm text-slate-500">व्यवसायी, पुणे</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-amber-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 mb-4 italic">"PDF अहवाल खूप सविस्तर होता. प्रत्येक गोष्ट समजावून सांगितली. धन्यवाद!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-700">प</div>
+                        <div>
+                            <p class="font-semibold text-slate-800">प्रिया शर्मा</p>
+                            <p class="text-sm text-slate-500">IT प्रोफेशनल, मुंबई</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                    <div class="flex text-amber-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 mb-4 italic">"VIP सेवा खरोखरच उत्कृष्ट होती. सर्व काम त्यांनी केले. फक्त SIM card बदलायचे होते!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-700">स</div>
+                        <div>
+                            <p class="font-semibold text-slate-800">संजय देशमुख</p>
+                            <p class="text-sm text-slate-500">डॉक्टर, नागपूर</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-3xl p-8 md:p-12 text-center text-white mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">आजच तुमचा अहवाल मिळवा!</h2>
+            <p class="text-indigo-200 mb-8 text-lg">तुमच्या यशाची सुरुवात योग्य नंबरपासून होते</p>
+            <button onclick="handleWhatsApp('inquiry')" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all shadow-lg">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp द्वारे संपर्क करा
+            </button>
+        </section>
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-12">
-        <p>© 2026 VVIKASNUMEROLOGYHUB.IN. सर्व हक्क राखीव.</p>
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+        <p class="mb-2">© 2024 VVIKASNUMEROLOGYHUB.IN. सर्व हक्क राखीव.</p>
+        <p class="text-sm">📞 संपर्क: WhatsApp द्वारे संदेश पाठवा</p>
     </footer>
+
+    <div id="toast" class="toast-hidden fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg z-50">
+        <div class="flex items-center gap-2">
+            <span>✅</span><span id="toast-message">यशस्वी!</span>
+        </div>
+    </div>
 
     <script>
         // Timer Logic
-        let time = 15 * 60;
-        setInterval(() => {
-            const m = Math.floor(time / 60);
-            const s = time % 60;
-            document.getElementById('min').innerText = m < 10 ? '0'+m : m;
-            document.getElementById('sec').innerText = s < 10 ? '0'+s : s;
-            if(time > 0) time--; else time = 15 * 60;
-        }, 1000);
+        let totalSeconds = 15 * 60;
+        function updateTimer() {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            const mElem = document.getElementById('timer-minutes');
+            const sElem = document.getElementById('timer-seconds');
+            if(mElem && sElem) {
+                mElem.innerText = minutes.toString().padStart(2, '0');
+                sElem.innerText = seconds.toString().padStart(2, '0');
+                
+                // Red alert style
+                if (totalSeconds <= 120) {
+                    mElem.classList.replace('bg-red-600', 'bg-red-700');
+                    sElem.classList.replace('bg-red-600', 'bg-red-700');
+                }
+            }
+            if (totalSeconds <= 0) {
+                totalSeconds = 15 * 60; // Reset Loop
+            } else {
+                totalSeconds--;
+            }
+        }
+        setInterval(updateTimer, 1000);
 
-        // Links Logic
-        function handleWhatsApp(t) {
-            let m = 'नमस्कार! मला अधिक माहिती हवी आहे.';
-            if(t === 'free') m = 'नमस्कार! मला Free Chat साठी माहिती हवी आहे.';
-            window.open(`https://wa.me/918379965111?text=${encodeURIComponent(m)}`, '_blank');
-            fbq('track', 'Contact');
+        // Toast Logic
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.replace('toast-hidden', 'toast-visible');
+            setTimeout(() => toast.classList.replace('toast-visible', 'toast-hidden'), 3000);
         }
 
-        function handlePayment(p, a) {
-            fbq('track', 'InitiateCheckout', {value: a, currency: 'INR'});
-            let u = '';
-            if(p === 'mobile') u = 'https://rzp.io/rzp/nDQmiRCh';
-            if(p === 'expert') u = 'https://rzp.io/rzp/3JxES65';
-            if(p === 'vip') u = 'https://rzp.io/rzp/XVq5CXc';
-            if(u) window.open(u, '_blank');
+        // WhatsApp Logic
+        function handleWhatsApp(type) {
+            let msg = 'नमस्कार! मला तुमच्या सेवांबद्दल जाणून घ्यायचे आहे.';
+            if(type === 'free') msg = 'नमस्कार! मला Free Chat (मोफत अंक विश्लेषण) हवे आहे.';
+            if(type === 'inquiry') msg = 'नमस्कार! मला अंकशास्त्र सेवांबद्दल अधिक माहिती हवी आहे.';
+            window.open(`https://wa.me/918379965111?text=${encodeURIComponent(msg)}`, '_blank');
+            if(typeof fbq !== 'undefined') fbq('track', 'Contact');
+        }
+
+        // Payment Logic
+        function handlePayment(plan, amount) {
+            showToast(`₹${amount} साठी पेमेंट पेज उघडत आहे...`);
+            if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', {value: amount, currency: 'INR'});
+            
+            let url = '';
+            if(plan === 'mobile') url = 'https://rzp.io/rzp/nDQmiRCh';
+            if(plan === 'expert') url = 'https://rzp.io/rzp/3JxES65';
+            if(plan === 'vip') url = 'https://rzp.io/rzp/XVq5CXc';
+            
+            if(url) setTimeout(() => window.open(url, '_blank'), 1500);
         }
     </script>
 </body>
