@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Payment Successful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '1352262722891575'); // तुमचा ID इथे आहे
+    fbq('track', 'PageView');
+    
+    // 🔥 हे सर्वात महत्त्वाचे: Purchase Event (Sale Track करण्यासाठी)
+    fbq('track', 'Purchase', {currency: "INR", value: 499.00});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1352262722891575&ev=PageView&noscript=1"
+    /></noscript>
+    </head>
+<body class="bg-slate-50 flex items-center justify-center h-screen px-4">
+
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-lg text-center border-t-4 border-green-500">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        
+        <h1 class="text-3xl font-extrabold text-slate-800 mb-4">अभिनंदन! 🎉</h1>
+        <p class="text-lg text-slate-600 mb-6">तुमचे पेमेंट यशस्वी झाले आहे. तुम्ही "Mission 11 Cr" कम्युनिटीचा भाग झाला आहात.</p>
+        
+        <div class="bg-indigo-50 p-4 rounded-xl mb-6 text-left">
+            <h3 class="font-bold text-indigo-900 mb-2">पुढील स्टेप्स:</h3>
+            <ul class="text-sm text-indigo-800 space-y-2">
+                <li>1️⃣ खालील बटनावर क्लिक करा.</li>
+                <li>2️⃣ व्हॉट्सॲपवर तुमची जन्मदिनांक आणि नाव पाठवा.</li>
+                <li>3️⃣ २४ तासांत तुम्हाला रिपोर्ट मिळेल.</li>
+            </ul>
+        </div>
+
+        <a href="https://wa.me/918379965111?text=Hi Vikas Sir, Payment Done. My Name is:" 
+           class="block w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-lg transition shadow-lg">
+           व्हॉट्सॲपवर माहिती पाठवा 👉
+        </a>
+    </div>
+
+</body>
+</html>
